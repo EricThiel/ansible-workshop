@@ -6,7 +6,7 @@ Welcome to the 2-day Ansible workshop hosted by Cisco. We will be using the foll
 
 ### [YAML Basics](1-yaml.md)
 
-### [Lab 1 - NX-OS](https://learninglabs.cisco.com/tracks/devnet-express-dci/dne-dci-intro-nx-os/dne-dci-intro-nxos-06_ansible-nxapi/step/2)
+### [Lab 1 - NXOS](https://learninglabs.cisco.com/tracks/devnet-express-dci/dne-dci-intro-nx-os/dne-dci-intro-nxos-06_ansible-nxapi/step/2)
 
 ### [Lab 2 - NXOS](https://learninglabs.cisco.com/tracks/devnet-express-dci/dne-dci-intro-nx-os/dne-dci-intro-nxos-06_ansible-nxapi/step/4)
 
