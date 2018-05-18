@@ -10,6 +10,7 @@
 | **nxosv-2** | Nexus 9000v - 7.0.3(I2).1 | 198.18.134.141 | admin/C1sco12345 |
 | **centos1** | CentOS 7 Server - Automation Target | 198.18.134.49 | root/C1sco12345 or demouser/C1sco12345 |
 | **centos2** | CentOS 7 Server - Automation Target | 198.18.134.50 | root/C1sco12345 or demouser/C1sco12345 |
+| **ios-xe-mgmt.cisco.com** | CSR1000v - 16.08.01 | ios-xe-mgmt.cisco.com:8181 | root/D_Vay!_10& |
 | ucsctl1 | UCS Central - 1.5(1b) | 198.18.133.90 | admin/C1sco12345 |
 | ucsm1 | UCS Manager Emulator | 198.18.133.91 | admin/C1sco12345 |
 | apic1 | ACI Simulator - 2.1.1h | 198.18.133.200 | admin/C1sco12345 |
@@ -33,7 +34,7 @@ We will loosely follow Steps 2 and 3 at: https://learninglabs.cisco.com/tracks/d
 
 | Session Id |  Session Name |  Usernames |  Password |  Start |  Stop |  DNS Assets |  Shared With |  Endpoint Kits |  Public IPs |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| a | a | a | a | a | a | a | a | a | a | 
+| x | x | x | x | x | x | x | x | x | x | 
 
 
 1. If you do not have a VNC client, RDP to 198.18.133.36 with your preferred client. Log in with user: ```dcloud\demouser``` and password ```C1sco12345```
@@ -56,5 +57,5 @@ We will loosely follow Steps 2 and 3 at: https://learninglabs.cisco.com/tracks/d
 
 1. Run ```git clone https://github.com/securenetwrk/ansible-workshop.git``` to pull down the repo for the labs
 
-1. Run ```cd ansible-workshop``` to enter workshop directory
+1. Run ```cd ~/ansible-workshop``` to enter workshop directory
 
