@@ -1,0 +1,12 @@
+[iosxe:vars]
+# Fill in a unique pod name with no spaces
+user_pod = mypod
+# Fill in a pod number between 10 and 250
+pod_number = 10
+
+
+[iosxe:children]
+sandbox
+
+[sandbox]
+ios-xe-mgmt.cisco.com ansible_port=8181
