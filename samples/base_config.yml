@@ -1,0 +1,80 @@
+---
+- name: Enforce base Lab config
+  hosts: all
+  gather_facts: no
+
+  tasks:
+
+    # tasks file for ios_baseline_3850
+    - name: Configure system domain details 
+      ios_system:
+        domain_name: "{{ domain_name }}"
+        lookup_enabled: no
+      tags: lookup
+
+    - name: Archive logging config
+      ios_config:
+        lines:
+          - logging enable
+          - logging size 1000
+          - hidekeys
+        parents: 
+          - archive
+          - log config
+      tags: archive
+
+    - name: Set up aliases
+      ios_config:
+        lines:
+          - alias exec mping ping vrf {{ vrf_name }}
+          - alias configure iib do sh ip int brie
+          - alias configure wr do copy run start
+          - alias configure sh do show
+          - alias configure is do show int status | excl notc
+          - alias exec iib sh ip int brie
+          - alias exec is sh int status | excl notc
+      tags: alias
+
+    - name: Time config
+      ios_config:
+        lines:
+          - service timestamps debug datetime msec localtime show-timezone
+          - service timestamps log datetime msec localtime show-timezone
+          - clock timezone PST -8 0
+          - clock summer-time PDT recurring
+          - ntp server {{ ntp_server1 }} prefer
+          - ntp server {{ ntp_server2 }}
+      defaults: no
+      tags: time
+
+    - name: Logging config
+      ios_config:
+        lines:
+          - logging buffered 10240 
+      tags: logging
+
+    - name: Save config if changed
+      ios_config:
+        lines:
+        save_when: modified
+      tags: save
+
+    - name: show running-config
+      ios_command:
+        commands: show running
+      register: config
+
+    - name: ensure device folder is created
+      file:
+        path: "backup/{{ inventory_hostname }}"
+        state: directory
+
+    - name: get timestamp
+      command: date +%Y%m%d
+      register: timestamp
+
+    - copy:
+        content: "{{ config.stdout[0] }}"
+        dest: "backup/{{ inventory_hostname }}/running-config_{{ timestamp.stdout }}.cfg"
+
+

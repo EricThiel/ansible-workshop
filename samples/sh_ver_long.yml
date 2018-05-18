@@ -1,0 +1,16 @@
+---
+- name: Show Version Long
+  hosts: all
+  gather_facts: no
+
+  tasks:
+
+  - name: run show version (check to see if output contains IOS before succeeding)
+    ios_command:
+      commands: show version
+      wait_for: result[0] contains IOS
+    register: myver
+
+  - debug:
+      var: myver
+

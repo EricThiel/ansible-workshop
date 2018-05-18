@@ -1,0 +1,17 @@
+---
+- name: NXOS VLAN configuration
+  hosts: nxos
+  gather_facts: no
+
+  tasks:
+
+  ############################################################
+  #  VLAN CONFIGURATION
+  ############################################################
+
+  - name: Configure VLANs as defined in vars and host_vars
+    nxos_vlan:
+      aggregate: "{{ vlan_list }}"
+      state: present
+      purge: yes
+
