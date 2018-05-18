@@ -56,9 +56,5 @@ We will loosely follow Steps 2 and 3 at: https://learninglabs.cisco.com/tracks/d
 
 1. Run ```git clone https://github.com/securenetwrk/ansible-workshop.git``` to pull down the repo for the labs
 
-
-
-https://learninglabs.cisco.com/tracks/devnet-express-dci 
-
-https://github.com/securenetwrk/ansible-workshop
+1. Run ```cd ansible-workshop``` to enter workshop directory
 
