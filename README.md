@@ -13,3 +13,5 @@ Welcome to the 2-day Ansible workshop hosted by Cisco. We will be using the foll
 ### [Lab 3 - IOS-XE](labs/ansible-02-ios-modules/0-intro.md)
 
 ### [Lab 4 - IOS-XE](labs/ansible-03-netconf/0-intro.md)
+
+### [Mission 1 - IOS-XE](labs/ansible-04-mission/0-intro.md)
