@@ -25,4 +25,4 @@ You should also have an understanding of these foundational topics:
 
 You are encouraged to review the prior labs and lessons for examples of ways to complete each of the mission tasks. 
 
-#### Next: Your Mission, Should you Choose to Accept it!
+#### Next: [Your Mission, Should you Choose to Accept it!](1-mission.md)

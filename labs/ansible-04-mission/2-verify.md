@@ -98,5 +98,5 @@ PLAY RECAP *********************************************************************
 
 A message will also be posted to the Spark Room.  
 
-#### Next: Summary
+#### Next: [Summary](3-summary.md)
 

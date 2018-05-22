@@ -46,5 +46,5 @@ Just kidding... no hints for you
 </pre>
 </details>
 
-#### Next: Verifying the Solution
+#### Next: [Verifying the Solution](2-verify.md)
 
