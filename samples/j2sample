@@ -1,0 +1,19 @@
+var:
+vrfs:
+  outside:
+    subnet: 10.10.10.0/24
+    vlan: 1210
+  db:
+    subnet: 10.10.11.0/24
+    vlan: 1211
+  test:
+    subnet: 10.10.12.0/24
+    vlan: 1212
+
+
+.j2:
+{% for myvrf in vrfs %}
+ The first ip for {{ myvrf }} is {{ vrfs[myvrf]["subnet"] | ipaddr('1') | ipaddr('address') }} 
+ The second ip for OUTSIDE is {{ vrfs['outside']["subnet"] | ipaddr('2') | ipaddr('address') }}
+{% endfor %}
+
